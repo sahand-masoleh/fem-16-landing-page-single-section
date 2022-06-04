@@ -27,13 +27,13 @@ body {
 	background-repeat: no-repeat;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	justify-content: center;
 }
 
 .cards {
 	display: flex;
 	flex-direction: column;
-	max-width: 40em;
+	max-width: 35em;
 	flex-grow: 1;
 	padding: var(--padding);
 }
@@ -113,17 +113,22 @@ footer {
 	width: 2em;
 	height: 2em;
 	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
 	mask-position: center;
+	-webkit-mask-position: center;
 }
 
 .socials:nth-of-type(1) div {
 	mask-image: url(./images/facebook-f-brands.svg);
+	-webkit-mask-image: url(./images/facebook-f-brands.svg);
 }
 .socials:nth-of-type(2) div {
 	mask-image: url(./images/twitter-brands.svg);
+	-webkit-mask-image: url(./images/twitter-brands.svg);
 }
 .socials:nth-of-type(3) div {
 	mask-image: url(./images/instagram-brands.svg);
+	-webkit-mask-image: url(./images/instagram-brands.svg);
 }
 
 .socials:hover {
@@ -139,4 +144,45 @@ footer {
 }
 #attribution a {
 	color: var(--soft-magenta);
+}
+
+@media screen and (min-width: 535px) {
+	/* :root {
+		--padding: 0;
+	}
+	body {
+		background-image: url(images/bg-desktop.svg);
+		background-size: cover;
+		align-content: center;
+		min-height: 100vh;
+		gap: 3em;
+	}
+
+	#logo {
+		width: 12em;
+		margin-bottom: 4em;
+	}
+
+	main {
+		align-items: flex-start;
+		justify-content: center;
+		text-align: start;
+		position: relative;
+	}
+
+	main h1 {
+		font-size: 2.5em;
+	}
+
+	main button {
+		font-size: 1em;
+		padding: 1em 4em;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		align-self: flex-end;
+	} */
 }
