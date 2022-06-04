@@ -10,13 +10,133 @@
 	--violet: hsl(257, 40%, 49%);
 	--soft-magenta: hsl(300, 69%, 71%);
 	--f-p: "Open Sans", sans-serif;
-	--f-c: "Poppins", sans-serif;
+	--f-s: "Poppins", sans-serif;
+
+	--padding: 1em 2em;
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
+img {
+	max-width: 100%;
+	max-height: 100%;
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+body {
+	background-image: url(./images/bg-mobile.svg);
+	background-color: var(--violet);
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	max-width: 40em;
+	flex-grow: 1;
+	padding: var(--padding);
+}
+
+/* PREVIEW */
+
+#preview {
+	flex-basis: 55%;
+}
+
+#logo {
+	width: 8em;
+	margin: 1em 0 3em 0;
+}
+
+/* MAIN */
+
+main {
+	flex-basis: max(45%, 30ch);
+	color: white;
+	text-align: center;
+
+	align-items: center;
+	gap: 1em;
+}
+
+main h1 {
+	font-family: var(--f-s);
+	font-size: 1.4em;
+}
+
+main p {
+	font-family: var(--f-p);
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+main button {
+	background-color: white;
+	color: var(--violet);
+	border: none;
+	font-size: 0.7em;
+	padding: 1em 6em;
+	border-radius: 2em;
+	font-family: var(--f-p);
+	box-shadow: 0 0.25em 0.5em 0 rgb(0, 0, 0, 0.25);
+	cursor: pointer;
+	justify-items: center;
+}
+
+main > button:hover {
+	background-color: var(--soft-magenta);
+}
+
+/* FOOTER */
+
+footer {
+	justify-self: flex-end;
+	font-size: 0.5em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin-top: 5em;
+}
+
+.socials {
+	border-radius: 50%;
+	padding: 5px;
+	outline: 1px solid white;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.socials > div {
+	background-color: white;
+	width: 2em;
+	height: 2em;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.socials:nth-of-type(1) div {
+	mask-image: url(./images/facebook-f-brands.svg);
+}
+.socials:nth-of-type(2) div {
+	mask-image: url(./images/twitter-brands.svg);
+}
+.socials:nth-of-type(3) div {
+	mask-image: url(./images/instagram-brands.svg);
+}
+
+.socials:hover {
+	outline-color: var(--soft-magenta);
+}
+
+.socials:hover div {
+	background-color: var(--soft-magenta);
+}
+
+#attribution {
+	flex-basis: 100%;
+}
+#attribution a {
+	color: var(--soft-magenta);
 }
