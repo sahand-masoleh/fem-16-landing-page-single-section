@@ -147,7 +147,7 @@ footer {
 }
 
 @media screen and (min-width: 535px) {
-	/* :root {
+	:root {
 		--padding: 0;
 	}
 	body {
@@ -155,12 +155,16 @@ footer {
 		background-size: cover;
 		align-content: center;
 		min-height: 100vh;
-		gap: 3em;
 	}
+
+	/* body gap */
 
 	#logo {
 		width: 12em;
 		margin-bottom: 4em;
+	}
+	.cards {
+		padding: 0 1em;
 	}
 
 	main {
@@ -171,7 +175,7 @@ footer {
 	}
 
 	main h1 {
-		font-size: 2.5em;
+		font-size: min(2.5em, 5vw);
 	}
 
 	main button {
@@ -180,9 +184,14 @@ footer {
 	}
 
 	footer {
-		position: absolute;
 		bottom: 0;
 		text-align: center;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	footer {
+		position: absolute;
 		align-self: flex-end;
-	} */
+	}
 }
